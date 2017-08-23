@@ -11,7 +11,7 @@ Programmers: Donghwee Kwon dhkwon7740@gmail.com / dokwon@ucsd.edu
 Date: 23 August 2017
 
 # 23 August 2017
-1.Made Toolbar and basic wireframe
+1. Made Toolbar and basic wireframe
 
 2. Made Memo class and MemoAdapter class
 
