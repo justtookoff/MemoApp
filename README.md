@@ -21,3 +21,32 @@ Date: 23 August 2017
 2. Will do floating action
 
 3. Will do writing activity
+
+#Plan
+1. Cardview
+
+2. floating action
+
+3. writing activity
+
+4. camera 
+
+5. gallery
+
+6. putting picture inside of the writing activity
+
+7. check box
+
+8. login
+
+9. register
+
+10. firebase
+
+11. firebase <-- upload all the data (each cardview even with the picture)
+
+12. categorize the memos
+
+13. search
+
+14. edit the cadviews
