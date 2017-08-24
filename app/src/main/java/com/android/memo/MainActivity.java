@@ -1,24 +1,43 @@
 package com.android.memo;
 
+import android.content.Intent;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.ListViewCompat;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+
+import com.android.memo.Memo.WriteMemoActivity;
 
 public class MainActivity extends AppCompatActivity {
-    private Toolbar toolbar;
-
+    private ListViewCompat listView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        setToolbar();
 
-        toolbar = (Toolbar) findViewById(R.id.toolBar);
-        setSupportActionBar(toolbar);
+        //listView = (ListViewCompat) findViewById(R.id.listview);
+
+        //Floating action button for writing
+        FloatingActionButton writePost = (FloatingActionButton) findViewById(R.id.write_post);
+        writePost.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(view.getContext(), WriteMemoActivity.class);
+                startActivityForResult(intent, 0);
+            }
+        });
     }
 
+    private void setToolbar() {
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolBar);
+        setSupportActionBar(toolbar);
+    }
     /**
      * This is for action menu
      * @param menu

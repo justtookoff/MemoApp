@@ -1,6 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    tools:context="com.android.memo.MainActivity">
 
-</LinearLayout>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="10dp"
+        app:contentPaddingRight="10dp"
+        app:contentPaddingLeft="10dp"
+        app:cardMaxElevation="15dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:id="@+id/memo_picture"
+                android:layout_width="100dp"
+                android:layout_height="90dp"
+                android:layout_alignRight="@+id/memo_title" />
+
+            <TextView
+                android:id="@+id/memo_title"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:hint="Title"
+                android:textStyle="bold"
+                android:textSize="23dp"/>
+
+            <TextView
+                android:id="@+id/memo_content"
+                android:layout_below="@+id/memo_title"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:hint="Content"
+                android:textStyle="normal"
+                android:textSize="20dp"
+                android:maxLines="3"/>
+
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.CardView>
+</RelativeLayout>
