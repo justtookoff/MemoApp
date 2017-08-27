@@ -10,16 +10,24 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ListView;
+import android.widget.Toast;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 public class MainActivity extends AppCompatActivity {
-    private ListViewCompat listView;
+    private ListView listView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         setToolbar();
 
-        //listView = (ListViewCompat) findViewById(R.id.listview);
+        listView = (ListView) findViewById(R.id.memo_listview);
 
         //Floating action button for writing
         FloatingActionButton writePost = (FloatingActionButton) findViewById(R.id.write_post);
@@ -64,4 +72,50 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    /**
+     * Restart the activity
+     */
+    @Override
+    protected  void onResume(){
+        super.onResume();
+
+        //load saved notes into the listview
+        //first, reset the listview
+        listView.setAdapter(null);
+        ArrayList<Memo> memos = Utilities.getAllSavedPosts(getApplicationContext());
+
+        //sort notes from new to old
+        Collections.sort(memos, new Comparator<Memo>() {
+            @Override
+            public int compare(Memo lhs, Memo rhs) {
+                if(lhs.getDateTime() > rhs.getDateTime()) {
+                    return -1;
+                } else {
+                    return 1;
+                }
+            }
+        });
+
+        if(memos != null && memos.size() > 0) { //check if we have any notes!
+            final MemoAdapter na = new MemoAdapter(this, R.layout.layout_cardview, memos);
+            listView.setAdapter(na);
+
+            //set click listener for items in the list, by clicking each item the note should be loaded into NoteActivity
+            listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                    String fileName = ((Memo) listView.getItemAtPosition(position)).getDateTime()
+                            + Utilities.FILE_EXTENSION;
+
+                    Intent viewIntent = new Intent(getApplicationContext(), WriteMemoActivity.class);
+                    viewIntent.putExtra(Utilities.EXTRAS_NOTE_FILENAME, fileName);
+                    startActivity(viewIntent);
+                }
+            });
+        }
+        else { //remind user that we have no notes!
+            Toast.makeText(getApplicationContext(), "you have no saved notes!\ncreate some new notes :)"
+                    , Toast.LENGTH_SHORT).show();
+        }
+    }
 }

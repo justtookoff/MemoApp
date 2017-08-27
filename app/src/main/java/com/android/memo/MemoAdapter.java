@@ -1,9 +1,11 @@
 package com.android.memo;
 
 import android.content.Context;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.TextView;
 
 import com.android.memo.Memo;
 
@@ -21,17 +23,17 @@ public class MemoAdapter extends ArrayAdapter<Memo> {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        /*if(convertView == null){
-            convertView = LayoutInflater.from(getContext()).inflate(R.layout.view_post, null);
+        if(convertView == null){
+            convertView = LayoutInflater.from(getContext()).inflate(R.layout.layout_cardview, null);
         }
 
         Memo memo = getItem(position);
 
         //If post exists, set the texts on the list
         if(memo != null){
-            TextView title = (TextView) convertView.findViewById(R.id.list_view_title);
-            TextView content = (TextView) convertView.findViewById(R.id.list_view_contentPreview);
-            TextView date = (TextView) convertView.findViewById(R.id.list_view_date);
+            TextView title = (TextView) convertView.findViewById(R.id.memo_title);
+            TextView content = (TextView) convertView.findViewById(R.id.memo_content);
+            TextView date = (TextView) convertView.findViewById(R.id.memo_dateTime);
 
             title.setText(memo.getTitle());
 
@@ -44,7 +46,7 @@ public class MemoAdapter extends ArrayAdapter<Memo> {
             }
 
             date.setText(memo.getDateTimeFormatted(getContext()));
-        }*/
+        }
         return convertView;
     }
 
