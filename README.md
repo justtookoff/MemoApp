@@ -15,19 +15,20 @@ Date: 23 August 2017
 
 2. Made Memo class and MemoAdapter class
 
-# 24 August 2017 Plan
-1. Will do cardview
+# 24 August 2017
+1. Do cardview
 
-2. Will do floating action
+2. Do floating action
 
-3. Will do writing activity
+3. Do writing activity
+
+# 26 August 2017
+1. Do cardview
+
+2. Add listview
 
 # Plan
-1. Cardview
-
-2. floating action
-
-3. writing activity
+3. Memo View(when click the memo to view) + floating action(when clicked -> go to writing activity)
 
 4. camera 
 
