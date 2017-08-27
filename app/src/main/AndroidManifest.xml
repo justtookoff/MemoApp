@@ -17,7 +17,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".Memo.WriteMemoActivity"></activity>
+        <activity android:name=".WriteMemoActivity"></activity>
     </application>
 
 </manifest>

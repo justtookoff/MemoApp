@@ -11,8 +11,6 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 
-import com.android.memo.Memo.WriteMemoActivity;
-
 public class MainActivity extends AppCompatActivity {
     private ListViewCompat listView;
     @Override

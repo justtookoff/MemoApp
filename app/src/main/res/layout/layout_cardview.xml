@@ -46,11 +46,19 @@
                 android:id="@+id/memo_content"
                 android:layout_below="@+id/memo_title"
                 android:layout_width="match_parent"
-                android:layout_height="75dp"
+                android:layout_height="60dp"
                 android:hint="Content"
                 android:textStyle="normal"
                 android:textSize="20dp"
                 android:maxLines="3"/>
+
+            <TextView
+                android:id="@+id/memo_dateTime"
+                android:layout_below="@+id/memo_content"
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:hint="Date and Time"
+                android:textSize="15dp"/>
 
         </RelativeLayout>
 

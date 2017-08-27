@@ -1,18 +1,15 @@
-package com.android.memo.Memo;
+package com.android.memo;
 
 import android.content.DialogInterface;
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.widget.EditText;
-import android.widget.Toast;
 
+import com.android.memo.Memo;
 import com.android.memo.R;
-
-import static java.sql.Types.NULL;
 
 /**
  * Created by Donghwee on 2017-08-24.

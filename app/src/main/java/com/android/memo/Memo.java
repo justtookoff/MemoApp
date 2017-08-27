@@ -1,4 +1,4 @@
-package com.android.memo.Memo;
+package com.android.memo;
 
 import android.content.Context;
 
