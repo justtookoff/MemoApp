@@ -7,6 +7,7 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.android.memo.Memo;
 import com.android.memo.R;
@@ -73,12 +74,12 @@ public class WriteMemoActivity extends AppCompatActivity{
         Memo memo = new Memo(this.memoTitle.getText().toString(), this.memoContent.getText().toString(), System.currentTimeMillis());
 
         //To save the memo through the utilities file
-        /*if(Utilities.savePost(this, memo)){
+        if(Utilities.savePost(this, memo)){
             Toast.makeText(this, "Your post is saved", Toast.LENGTH_SHORT).show();
         }
         else{
             Toast.makeText(this, "Your post is not saved", Toast.LENGTH_SHORT).show();
-        }*/
+        }
 
     }
 
