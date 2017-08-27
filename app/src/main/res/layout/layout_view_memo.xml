@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
     <android.support.v7.widget.Toolbar
-        android:id="@+id/memo_write_toolbar"
+        android:id="@+id/memo_view_toolbar"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="?attr/colorPrimary"
@@ -15,28 +15,28 @@
         app:theme= "@style/ThemeOverlay.AppCompat.Light" />
 
     <ScrollView
-        android:id="@+id/write_scroll"
-        android:layout_below="@id/memo_write_toolbar"
+        android:id="@+id/view_scroll"
+        android:layout_below="@id/memo_view_toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@id/write_scroll">
+            android:layout_below="@id/view_scroll">
 
-            <EditText
-                android:id="@+id/memo_write_title"
+            <TextView
+                android:id="@+id/memo_view_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Title"
                 android:maxLines="1"/>
 
-            <EditText
-                android:id="@+id/memo_write_content"
+            <TextView
+                android:id="@+id/memo_view_content"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/memo_write_title"
+                android:layout_below="@+id/memo_view_title"
                 android:hint="Content"
                 android:selectAllOnFocus="true" />
         </RelativeLayout>

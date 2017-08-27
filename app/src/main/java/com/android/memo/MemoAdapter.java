@@ -31,9 +31,9 @@ public class MemoAdapter extends ArrayAdapter<Memo> {
 
         //If post exists, set the texts on the list
         if(memo != null){
-            TextView title = (TextView) convertView.findViewById(R.id.memo_title);
-            TextView content = (TextView) convertView.findViewById(R.id.memo_content);
-            TextView date = (TextView) convertView.findViewById(R.id.memo_dateTime);
+            TextView title = (TextView) convertView.findViewById(R.id.memo_cardview_title);
+            TextView content = (TextView) convertView.findViewById(R.id.memo_cardview_content);
+            TextView date = (TextView) convertView.findViewById(R.id.memo_cardview_dateTime);
 
             title.setText(memo.getTitle());
 

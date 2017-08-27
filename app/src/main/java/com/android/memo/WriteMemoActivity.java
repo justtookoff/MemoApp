@@ -26,12 +26,12 @@ public class WriteMemoActivity extends AppCompatActivity{
         setContentView(R.layout.layout_write_memo);
         setToolbar();
 
-        memoTitle = (EditText) findViewById(R.id.memo_title);
-        memoContent = (EditText) findViewById(R.id.memo_content);
+        memoTitle = (EditText) findViewById(R.id.memo_write_title);
+        memoContent = (EditText) findViewById(R.id.memo_write_content);
     }
 
     private void setToolbar() {
-        Toolbar toolbar = (Toolbar) findViewById(R.id.memo_toolbar);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.memo_write_toolbar);
         setSupportActionBar(toolbar);
     }
 
