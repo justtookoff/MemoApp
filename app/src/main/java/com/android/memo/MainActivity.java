@@ -107,7 +107,7 @@ public class MainActivity extends AppCompatActivity {
                     String fileName = ((Memo) listView.getItemAtPosition(position)).getDateTime()
                             + Utilities.FILE_EXTENSION;
 
-                    Intent viewIntent = new Intent(getApplicationContext(), WriteMemoActivity.class);
+                    Intent viewIntent = new Intent(getApplicationContext(), ViewMemoActivity.class);
                     viewIntent.putExtra(Utilities.EXTRAS_NOTE_FILENAME, fileName);
                     startActivity(viewIntent);
                 }

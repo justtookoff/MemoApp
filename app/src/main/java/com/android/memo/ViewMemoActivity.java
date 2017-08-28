@@ -1,9 +1,12 @@
 package com.android.memo;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
 
 /**
  * Created by Donghwee on 2017-08-27.
@@ -23,6 +26,14 @@ public class ViewMemoActivity extends AppCompatActivity {
         /* Floating option to write -> this calls the WriteMemoActivity
          * contents should be uploaded too!
          */
+        FloatingActionButton rewriteMemo = (FloatingActionButton) findViewById(R.id.memo_view_floating);
+        rewriteMemo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(view.getContext(), WriteMemoActivity.class);
+                startActivityForResult(intent, 0);
+            }
+        });
     }
 
     private void setToolbar() {

@@ -30,6 +30,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Title"
+                android:textSize="25dp"
+                android:textStyle="bold"
                 android:maxLines="1"/>
 
             <TextView
@@ -38,9 +40,38 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/memo_view_title"
                 android:hint="Content"
+                android:textSize="20dp"
                 android:selectAllOnFocus="true" />
+
+            <TextView
+                android:id="@+id/memo_view_dateTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/memo_view_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:hint="mm/dd/yyyy"
+                android:textSize="15dp"/>
+
+
         </RelativeLayout>
 
     </ScrollView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/memo_view_floating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:backgroundTint="@color/colorPrimary"
+        app:fabSize="normal"
+        app:layout_anchorGravity="bottom|right"
+        app:srcCompat="@android:drawable/ic_input_add"
+        android:layout_marginRight="19dp"
+        android:layout_marginBottom="24dp"
+        android:layout_marginEnd="19dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>
