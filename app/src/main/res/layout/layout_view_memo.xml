@@ -43,17 +43,6 @@
                 android:textSize="20dp"
                 android:selectAllOnFocus="true" />
 
-            <TextView
-                android:id="@+id/memo_view_dateTime"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/memo_view_content"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
-                android:hint="mm/dd/yyyy"
-                android:textSize="15dp"/>
-
 
         </RelativeLayout>
 
